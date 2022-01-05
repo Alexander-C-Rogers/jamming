@@ -5,6 +5,11 @@ import './Playlist.css';
 import TrackList from "../TrackLList/TrackList";
 
 class Playlist extends React.Component {
+    
+    handleNameChange(event) {
+        this.props.onNameChange(event.target.value);
+    }
+    
     render() {
         return (
             <div class="Playlist">
