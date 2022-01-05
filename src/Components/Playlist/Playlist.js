@@ -5,7 +5,12 @@ import './Playlist.css';
 import TrackList from "../TrackLList/TrackList";
 
 class Playlist extends React.Component {
-    
+    constructor(props) {
+        super(props);
+
+        this.handleNameChange = this.handleNameChange.bind(this);
+    }
+
     handleNameChange(event) {
         this.props.onNameChange(event.target.value);
     }
@@ -13,7 +18,7 @@ class Playlist extends React.Component {
     render() {
         return (
             <div class="Playlist">
-                <input defaultValue={"New Playlist"}  />
+                <input defaultValue={"New Playlist"} onChange= {this.handleNameChange} />
                 <TrackList tracks={this.props.playlsistTracks} 
                     onRemove={this.props.onRemove}
                     isRemoval={true} />
