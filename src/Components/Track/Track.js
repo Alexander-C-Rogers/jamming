@@ -3,6 +3,11 @@ import React from "react";
 import './Track.css';
 
 class Track extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.addTrack = this.addTrack.bind(this);
+    }
     
     renderAction() {
         if (this.props.isRemoval) {
