@@ -43,6 +43,12 @@ const Spotify = {
             }));
         });
     },
+
+    savePlaylist(name, trackUris) {
+        if (!name || !trackUris) {
+            return;
+        }
+    }
 }
 
 export default Spotify;
