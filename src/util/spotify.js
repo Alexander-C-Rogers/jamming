@@ -48,6 +48,12 @@ const Spotify = {
         if (!name || !trackUris) {
             return;
         }
+
+        const accessToken = Spotify.getAccessToken();
+        const headers = { Authorization: `Bearer ${accessToken}`};
+        let userID;
+
+        
     }
 }
 
